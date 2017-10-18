@@ -1,6 +1,8 @@
 #include <iostream>
-#include<iomanip>
+#include <iomanip>
+
 using namespace std;
+
 typedef struct list
 {
 	int value;
@@ -21,7 +23,9 @@ void deleteLast();
 void listReverse();
 void divideList(int position);
 void menu();
+
 int listSize = 0;
+
 int main()
 {
 	do
@@ -32,6 +36,7 @@ int main()
 	system("pause");
 	return 0;
 }
+
 void insertBack(int value)
 {
 	list* tmp = new list();
@@ -134,6 +139,7 @@ void remove(int value)
 		}
 	}
 }
+
 void deleteByPosition(int position)
 {
 	list* tmp = head;
@@ -157,6 +163,7 @@ void deleteByPosition(int position)
 		listSize--;
 	}
 }
+
 void deleteFirst()
 {
 	if (listSize==1)
@@ -176,6 +183,7 @@ void deleteFirst()
 	}
 	
 }
+
 void deleteLast()
 {
 	list* tmp = last;
@@ -185,6 +193,7 @@ void deleteLast()
 	cout << setw(5) << "Last List Deleted" << endl;
 	listSize--;
 }
+
 void listReverse()
 {
 	list * tmp = last;
@@ -195,6 +204,7 @@ void listReverse()
 	}
 	cout << endl;
 }
+
 void divideList(int position)
 {
 	if (position == 0 || position == listSize)
